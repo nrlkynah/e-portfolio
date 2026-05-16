@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Layla | SOC Analyst Portfolio</title>
+  <title>Layla |Software Developer</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -14,112 +15,137 @@
     }
 
     body{
-      font-family:'Segoe UI',sans-serif;
-      background:#f8fafc;
-      color:#1e293b;
-      line-height:1.7;
+      font-family:'Poppins',sans-serif;
+      background:#0f172a;
+      color:#e2e8f0;
+      line-height:1.8;
     }
 
     header{
-      background:linear-gradient(135deg,#7c3aed,#9333ea,#c084fc);
-      color:white;
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.92)),
+      url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       text-align:center;
-      padding:80px 10%;
+      padding:50px 10%;
+    }
+
+    .hero{
+      max-width:850px;
     }
 
     .profile-img{
-      width:170px;
-      height:170px;
+      width:190px;
+      height:190px;
       border-radius:50%;
       object-fit:cover;
-      border:5px solid white;
-      margin-bottom:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      border:6px solid #38bdf8;
+      margin-bottom:25px;
+      box-shadow:0 10px 40px rgba(56,189,248,0.5);
     }
 
     header h1{
-      font-size:3rem;
+      font-size:4rem;
       margin-bottom:10px;
+      color:white;
     }
 
     header h2{
-      font-size:1.3rem;
-      font-weight:normal;
+      font-size:1.5rem;
+      color:#38bdf8;
       margin-bottom:20px;
-      color:#f3e8ff;
+      font-weight:500;
     }
 
     header p{
       max-width:800px;
       margin:auto;
-      color:#ede9fe;
+      color:#cbd5e1;
+      font-size:1.05rem;
     }
 
     nav{
-      background:white;
+      background:#020617;
       padding:18px;
       position:sticky;
       top:0;
-      z-index:100;
+      z-index:1000;
       text-align:center;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      border-bottom:1px solid #1e293b;
     }
 
     nav a{
+      color:#e2e8f0;
       text-decoration:none;
-      color:#6b21a8;
-      margin:0 12px;
-      font-weight:600;
+      margin:0 15px;
+      font-weight:500;
       transition:0.3s;
     }
 
     nav a:hover{
-      color:#c026d3;
+      color:#38bdf8;
     }
 
     section{
-      padding:70px 10%;
+      padding:90px 10%;
     }
 
     .section-title{
-      font-size:2rem;
-      margin-bottom:30px;
-      color:#7c3aed;
-      border-left:6px solid #c084fc;
-      padding-left:15px;
+      font-size:2.5rem;
+      margin-bottom:40px;
+      color:white;
+      position:relative;
+    }
+
+    .section-title::after{
+      content:'';
+      width:80px;
+      height:4px;
+      background:#38bdf8;
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      border-radius:10px;
     }
 
     .card{
-      background:white;
-      padding:30px;
-      border-radius:18px;
+      background:#111c34;
+      padding:35px;
+      border-radius:25px;
       margin-bottom:25px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
-      transition:0.3s;
+      border:1px solid #1e293b;
+      box-shadow:0 15px 40px rgba(0,0,0,0.35);
+      transition:0.4s;
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-8px);
     }
 
     .card h3{
-      margin-bottom:12px;
-      color:#581c87;
+      color:white;
+      margin-bottom:15px;
+      font-size:1.5rem;
     }
 
     .card h4{
+      color:#38bdf8;
       margin-bottom:15px;
-      color:#7e22ce;
-      font-weight:normal;
+      font-weight:500;
     }
 
     ul{
       margin-left:20px;
-      margin-top:10px;
+      margin-top:15px;
     }
 
     li{
-      margin-bottom:10px;
+      margin-bottom:12px;
     }
 
     .grid{
@@ -130,17 +156,17 @@
 
     .tag{
       display:inline-block;
-      background:#ede9fe;
-      color:#6b21a8;
-      padding:8px 14px;
-      border-radius:30px;
+      background:#0f172a;
+      color:#38bdf8;
+      padding:10px 16px;
+      border-radius:40px;
       margin:6px;
+      border:1px solid #38bdf8;
       font-size:0.9rem;
-      font-weight:600;
     }
 
     .timeline{
-      border-left:4px solid #a855f7;
+      border-left:4px solid #38bdf8;
       padding-left:25px;
     }
 
@@ -148,50 +174,56 @@
       margin-bottom:30px;
     }
 
+    .project-img,
+    .certificate-img{
+      width:100%;
+      border-radius:18px;
+      margin-bottom:18px;
+      border:1px solid #334155;
+    }
+
     .button-link{
       display:inline-block;
       margin-top:15px;
-      padding:12px 18px;
-      background:#7c3aed;
-      color:white;
+      padding:12px 20px;
+      background:#38bdf8;
+      color:#0f172a;
       border-radius:12px;
       text-decoration:none;
+      font-weight:600;
       transition:0.3s;
     }
 
     .button-link:hover{
-      background:#9333ea;
-    }
-
-    .project-img,
-    .certificate-img{
-      width:100%;
-      border-radius:15px;
-      margin-bottom:15px;
+      background:#7dd3fc;
     }
 
     .contact{
-      background:#6b21a8;
-      color:white;
+      background:#020617;
       text-align:center;
     }
 
     .contact a{
-      color:#f5d0fe;
+      color:#38bdf8;
       text-decoration:none;
     }
 
     footer{
-      background:#581c87;
-      color:#e9d5ff;
       text-align:center;
       padding:20px;
+      background:#020617;
+      color:#94a3b8;
+      border-top:1px solid #1e293b;
     }
 
     @media(max-width:768px){
 
       header h1{
-        font-size:2.2rem;
+        font-size:2.5rem;
+      }
+
+      header h2{
+        font-size:1.2rem;
       }
 
       nav a{
@@ -200,28 +232,41 @@
       }
 
     }
+
   </style>
+
 </head>
 
 <body>
 
 <header>
-  <img src="profile.jpg" class="profile-img">
-  <h1>Layla</h1>
-  <h2>Future SOC Analyst</h2>
 
-  <p>
-    Computer Science student with strong interest in cybersecurity, network monitoring and digital security operations. Passionate about detecting cyber threats, analyzing suspicious activities and protecting systems from security attacks through continuous learning and technical skill development.
-  </p>
+  <div class="hero">
+
+    <img src="profile.jpg" class="profile-img">
+
+    <h1>Layla</h1>
+
+    <h2>Security-Focused Software Developer</h2>
+
+    <p>
+      Passionate Computer Science student with strong interest in software development, secure coding and modern web technologies. Experienced in developing responsive web systems and continuously improving technical skills in programming, databases and cybersecurity practices to build secure and reliable applications.
+    </p>
+
+  </div>
+
 </header>
 
 <nav>
+
   <a href="#profile">Profile</a>
   <a href="#career">Career</a>
+  <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#plan">Plan</a>
   <a href="#evidence">Evidence</a>
   <a href="#reflection">Reflection</a>
+
 </nav>
 
 <section id="profile">
@@ -229,9 +274,11 @@
   <h2 class="section-title">Profile Summary</h2>
 
   <div class="card">
+
     <p>
-      I am currently pursuing studies in Computer Science and developing my knowledge in cybersecurity, networking and system security. I am highly interested in becoming a SOC Analyst because I enjoy solving technical problems, monitoring systems and learning how organizations protect their digital infrastructure from cyber threats. I aim to continuously improve my technical and analytical skills to become a professional cybersecurity specialist in the future.
+      I am currently pursuing studies in Computer Science and actively developing my skills in web development, software engineering and secure application development. I enjoy creating user-friendly systems while ensuring security, functionality and performance are properly implemented. My goal is to become a professional software developer with strong awareness in cybersecurity and secure coding practices.
     </p>
+
   </div>
 
 </section>
@@ -242,20 +289,79 @@
 
   <div class="card">
 
-    <h3>Chosen Career Role: SOC Analyst</h3>
+    <h3>Chosen Career Role: Software Developer (Security-Focused)</h3>
 
     <p>
-      A Security Operations Center (SOC) Analyst is responsible for monitoring and analyzing security events within an organization’s systems and networks. SOC Analysts help identify cyber threats, investigate suspicious activities and respond to security incidents before they become serious attacks.
+      A security-focused software developer is responsible for designing, developing and maintaining software applications while applying secure coding principles to protect systems and user data. This role is highly important in modern industries because many organizations depend on digital platforms and cloud-based applications that are exposed to cyber threats and security vulnerabilities.
     </p>
 
     <ul>
-      <li>Monitor network traffic and security alerts.</li>
-      <li>Identify malware, phishing and suspicious activities.</li>
-      <li>Analyze logs and investigate security incidents.</li>
-      <li>Use cybersecurity tools such as Wireshark and SIEM platforms.</li>
-      <li>Support incident response and system protection activities.</li>
-      <li>Help organizations improve cybersecurity awareness and security practices.</li>
+
+      <li>Develop responsive and secure web applications.</li>
+
+      <li>Implement authentication and authorization systems.</li>
+
+      <li>Apply secure coding practices to reduce vulnerabilities.</li>
+
+      <li>Manage databases securely and protect sensitive information.</li>
+
+      <li>Debug systems and improve software performance.</li>
+
+      <li>Collaborate with teams to develop efficient digital solutions.</li>
+
     </ul>
+
+  </div>
+
+</section>
+
+<section id="education">
+
+  <h2 class="section-title">Education</h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>Bachelor of Computer Science (Internet Computing) with Honours</h3>
+
+      <h4>Universiti Sultan Zainal Abidin | 2023 - Present</h4>
+
+      <ul>
+
+        <li>Studying web development, networking, database systems and internet technologies.</li>
+
+        <li>Developing skills in secure software development and system design.</li>
+
+        <li>Involved in academic projects related to programming and web applications.</li>
+
+      </ul>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Relevant Coursework & Learning Areas</h3>
+
+      <h4>Technical Knowledge Development</h4>
+
+      <ul>
+
+        <li>Web Application Development</li>
+
+        <li>Database Management Systems</li>
+
+        <li>Network & System Administration</li>
+
+        <li>Cybersecurity Fundamentals</li>
+
+        <li>Software Engineering</li>
+
+        <li>Human Computer Interaction</li>
+
+      </ul>
+
+    </div>
 
   </div>
 
@@ -273,25 +379,25 @@
 
       <span class="tag">HTML</span>
       <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
       <span class="tag">PHP</span>
       <span class="tag">Python</span>
       <span class="tag">MySQL</span>
-      <span class="tag">Networking Basics</span>
-      <span class="tag">Linux Basics</span>
-      <span class="tag">Database Management</span>
+      <span class="tag">CodeIgniter</span>
+      <span class="tag">GitHub</span>
 
     </div>
 
     <div class="card">
 
-      <h3>Cybersecurity Skills</h3>
+      <h3>Cybersecurity & System Skills</h3>
 
-      <span class="tag">Packet Analysis</span>
-      <span class="tag">Wireshark</span>
-      <span class="tag">Authentication</span>
       <span class="tag">Secure Coding</span>
+      <span class="tag">Authentication</span>
       <span class="tag">Input Validation</span>
-      <span class="tag">Basic Threat Detection</span>
+      <span class="tag">Linux Fundamentals</span>
+      <span class="tag">Networking Basics</span>
+      <span class="tag">Database Security</span>
 
     </div>
 
@@ -300,11 +406,11 @@
       <h3>Soft Skills</h3>
 
       <span class="tag">Communication</span>
+      <span class="tag">Leadership</span>
       <span class="tag">Problem Solving</span>
       <span class="tag">Teamwork</span>
-      <span class="tag">Leadership</span>
+      <span class="tag">Creativity</span>
       <span class="tag">Adaptability</span>
-      <span class="tag">Time Management</span>
 
     </div>
 
@@ -315,7 +421,7 @@
     <h3>Skills Gap Analysis</h3>
 
     <p>
-      Although I already have foundational technical knowledge in programming and networking, I still need to improve my cybersecurity expertise to meet industry requirements for SOC Analysts. I plan to strengthen my knowledge in SIEM systems, penetration testing, cloud security, malware analysis and incident response handling.
+      Although I already have a strong foundation in web development and programming, I still need to improve my knowledge in advanced cybersecurity, cloud technologies, API security and enterprise software architecture to meet current industry standards. I plan to continuously improve through self-learning, online certifications and practical projects.
     </p>
 
   </div>
@@ -333,11 +439,17 @@
       <h3>Short-Term Goals (1 – 2 Years)</h3>
 
       <ul>
-        <li>Complete cybersecurity related courses and workshops.</li>
-        <li>Learn cybersecurity tools such as Wireshark, Kali Linux and Nmap.</li>
-        <li>Improve Linux and networking skills.</li>
-        <li>Prepare for certifications such as CompTIA Security+ and CCNA.</li>
-        <li>Gain internship experience in cybersecurity or IT support.</li>
+
+        <li>Complete internship related to software development or cybersecurity.</li>
+
+        <li>Improve secure coding and debugging skills.</li>
+
+        <li>Learn advanced GitHub and collaborative development workflow.</li>
+
+        <li>Complete certifications such as Security+, CCNA or AWS Cloud Foundations.</li>
+
+        <li>Build more full-stack web applications and personal projects.</li>
+
       </ul>
 
     </div>
@@ -347,11 +459,17 @@
       <h3>Long-Term Goals (3 – 5 Years)</h3>
 
       <ul>
-        <li>Become a professional SOC Analyst.</li>
-        <li>Work in a cybersecurity company or security operations center.</li>
-        <li>Develop strong incident response and threat analysis skills.</li>
-        <li>Continue professional certifications and industry training.</li>
-        <li>Specialize in cloud security or digital forensics.</li>
+
+        <li>Become a professional software developer with cybersecurity expertise.</li>
+
+        <li>Work in a technology-driven company focusing on digital innovation.</li>
+
+        <li>Develop enterprise-level secure systems and applications.</li>
+
+        <li>Expand expertise in cloud computing and software security.</li>
+
+        <li>Continue professional development through industry certifications and experience.</li>
+
       </ul>
 
     </div>
@@ -370,10 +488,10 @@
 
       <img src="certificate1.jpg" class="certificate-img">
 
-      <h3>Python Essentials</h3>
+      <h3>Python Essentials Certificate</h3>
 
       <p>
-        Learned the fundamentals of Python programming including variables, functions, loops and problem solving techniques.
+        Completed foundational Python programming course covering variables, loops, functions and problem-solving concepts.
       </p>
 
     </div>
@@ -382,22 +500,22 @@
 
       <img src="certificate2.jpg" class="certificate-img">
 
-      <h3>HTML & Web Development</h3>
+      <h3>HTML & Web Development Certificate</h3>
 
       <p>
-        Completed training in HTML and web development fundamentals including website structure and responsive design.
+        Learned web development fundamentals including responsive design, forms and website structure.
       </p>
 
     </div>
 
     <div class="card">
 
-      <img src="project1.jpg" class="certificate-img">
+      <img src="certificate3.jpg" class="certificate-img">
 
-      <h3>University Projects</h3>
+      <h3>Project & Workshop Participation</h3>
 
       <p>
-        Completed projects related to web development, database systems and system development during university studies.
+        Participated in academic projects and workshops related to software development and cybersecurity awareness.
       </p>
 
     </div>
@@ -415,19 +533,19 @@
     <h3>Dream Company: PETRONAS</h3>
 
     <p>
-      I want to work at PETRONAS because it is one of the leading companies in Malaysia that actively focuses on technology and digital transformation. I believe working in such an organization would provide me with opportunities to grow professionally and improve my cybersecurity skills through real industry exposure.
+      I want to work at PETRONAS because it is one of the leading companies in Malaysia that continuously invests in digital transformation and technological innovation. I believe working in such an environment would help me grow professionally while allowing me to contribute my technical knowledge and creativity.
     </p>
 
     <br>
 
     <p>
-      The value I can bring to the company includes my willingness to learn, responsibility, teamwork and technical knowledge in programming and system development. I am also passionate about cybersecurity and always eager to improve my skills in protecting systems and user information.
+      I can contribute to the company by developing secure and efficient software systems, solving technical problems and adapting quickly to new technologies. I am passionate about software development and continuously improving my knowledge in secure coding and modern web technologies.
     </p>
 
     <br>
 
     <p>
-      My strengths include communication skills, adaptability and problem-solving abilities. However, I still need to improve my advanced cybersecurity knowledge and practical experience. I believe with continuous learning and hands-on practice, I can become a competent SOC Analyst in the future.
+      My strengths include responsibility, teamwork, communication skills and willingness to learn. However, I still need to improve my advanced software architecture and cybersecurity expertise. I believe with continuous practice and industry exposure, I can become a valuable software developer in the future.
     </p>
 
   </div>
@@ -439,12 +557,17 @@
   <h2 class="section-title">Contact</h2>
 
   <p>Email: layla@gmail.com</p>
+
+  <p>GitHub: github.com/layla</p>
+
   <p>Location: Malaysia</p>
 
 </section>
 
 <footer>
-  <p>© 2026 Layla | SOC Analyst E-Portfolio</p>
+
+  <p>© 2026 Layla | Security-Focused Software Developer Portfolio</p>
+
 </footer>
 
 </body>
