@@ -1,590 +1,413 @@
-```html id="m8q4rt"
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Layla | Software Developer Portfolio</title>
+<title>Layla | Software Developer Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    body{
-      background:#f6f1eb;
-      color:#2b2b2b;
-      font-family:'Inter',sans-serif;
-      line-height:1.8;
-    }
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(135deg,#f6f1eb,#efe4d8);
+  color:#2b2b2b;
+}
 
-    header{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:80px 10%;
-      background:
-      linear-gradient(rgba(32,23,18,0.75),rgba(32,23,18,0.82)),
-      url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-      text-align:center;
-      color:white;
-    }
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
 
-    .hero{
-      max-width:850px;
-    }
+@keyframes glow{
+  0%{box-shadow:0 0 10px rgba(192,133,82,0.2);}
+  50%{box-shadow:0 0 25px rgba(192,133,82,0.4);}
+  100%{box-shadow:0 0 10px rgba(192,133,82,0.2);}
+}
 
-    .profile-img{
-      width:190px;
-      height:190px;
-      object-fit:cover;
-      border-radius:25px;
-      border:5px solid #d4a373;
-      margin-bottom:30px;
-      box-shadow:0 15px 40px rgba(0,0,0,0.4);
-    }
+/* HEADER */
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 10%;
+  background:
+  linear-gradient(rgba(10,8,6,0.85),rgba(10,8,6,0.9)),
+  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
 
-    header h1{
-      font-family:'Playfair Display',serif;
-      font-size:4.5rem;
-      margin-bottom:10px;
-      letter-spacing:1px;
-    }
+.hero{
+  max-width:900px;
+  animation:fadeUp 1s ease;
+}
 
-    header h2{
-      font-size:1.3rem;
-      color:#f2d3ab;
-      margin-bottom:25px;
-      font-weight:400;
-    }
+.profile-img{
+  width:180px;
+  height:180px;
+  border-radius:25px;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,0.3);
+  margin-bottom:20px;
+}
 
-    header p{
-      color:#f3f3f3;
-      max-width:760px;
-      margin:auto;
-      font-size:1.05rem;
-    }
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:4.2rem;
+}
 
-    nav{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#fffaf5;
-      padding:20px;
-      text-align:center;
-      box-shadow:0 4px 20px rgba(0,0,0,0.06);
-    }
+/* TYPING EFFECT */
+.typing{
+  font-size:1.2rem;
+  color:#f2d3ab;
+  border-right:2px solid white;
+  width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  animation:typing 4s steps(40,end) forwards, blink .8s infinite;
+}
 
-    nav a{
-      text-decoration:none;
-      margin:0 18px;
-      color:#6b4f3b;
-      font-weight:600;
-      transition:0.3s;
-      font-size:0.95rem;
-      letter-spacing:0.5px;
-    }
+@keyframes typing{
+  from{width:0;}
+  to{width:100%;}
+}
 
-    nav a:hover{
-      color:#c08552;
-    }
+@keyframes blink{
+  50%{border-color:transparent;}
+}
 
-    section{
-      padding:100px 10%;
-    }
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(255,250,245,0.9);
+  backdrop-filter:blur(10px);
+  padding:18px;
+  text-align:center;
+  z-index:1000;
+}
 
-    .section-title{
-      font-family:'Playfair Display',serif;
-      font-size:3rem;
-      margin-bottom:50px;
-      color:#3b2f2f;
-      position:relative;
-    }
+nav a{
+  margin:0 14px;
+  text-decoration:none;
+  color:#6b4f3b;
+  font-weight:600;
+  transition:0.3s;
+}
 
-    .section-title::after{
-      content:'';
-      width:90px;
-      height:4px;
-      background:#c08552;
-      position:absolute;
-      left:0;
-      bottom:-15px;
-      border-radius:20px;
-    }
+nav a:hover{
+  color:#c08552;
+}
 
-    .card{
-      background:white;
-      border-radius:30px;
-      padding:40px;
-      margin-bottom:30px;
-      box-shadow:0 15px 40px rgba(0,0,0,0.07);
-      transition:0.4s;
-    }
+/* SECTIONS */
+section{
+  padding:90px 10%;
+  animation:fadeUp 1s ease;
+}
 
-    .card:hover{
-      transform:translateY(-8px);
-    }
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;
+  margin-bottom:35px;
+  position:relative;
+}
 
-    .card h3{
-      font-size:1.6rem;
-      color:#3b2f2f;
-      margin-bottom:15px;
-    }
+.section-title::after{
+  content:'';
+  width:80px;
+  height:4px;
+  background:#c08552;
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  border-radius:10px;
+}
 
-    .card h4{
-      color:#b07d52;
-      font-weight:500;
-      margin-bottom:18px;
-    }
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  border-radius:25px;
+  padding:35px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  margin-bottom:25px;
+  transition:0.4s;
+}
 
-    ul{
-      margin-left:20px;
-      margin-top:15px;
-    }
+.card:hover{
+  transform:translateY(-8px);
+  animation:glow 1.5s infinite;
+}
 
-    li{
-      margin-bottom:12px;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:30px;
-    }
+/* TAGS */
+.tag{
+  display:inline-block;
+  background:#f6ebe0;
+  color:#8b5e34;
+  padding:8px 14px;
+  border-radius:30px;
+  margin:5px;
+  font-size:0.85rem;
+}
 
-    .tag{
-      display:inline-block;
-      background:#f6ebe0;
-      color:#8b5e34;
-      padding:10px 18px;
-      border-radius:50px;
-      margin:6px;
-      font-size:0.9rem;
-      font-weight:500;
-    }
+/* CAREER */
+.career-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    .timeline{
-      border-left:3px solid #c08552;
-      padding-left:25px;
-    }
+.career-box{
+  background:linear-gradient(135deg,#fff,#f7efe7);
+  padding:22px;
+  border-left:5px solid #c08552;
+  border-radius:18px;
+}
 
-    .timeline-item{
-      margin-bottom:30px;
-    }
+/* CONTACT */
+.contact{
+  background:#2f2320;
+  color:white;
+  text-align:center;
+}
 
-    .project-img,
-    .certificate-img{
-      width:100%;
-      border-radius:20px;
-      margin-bottom:20px;
-    }
+/* FOOTER */
+footer{
+  background:#1e1613;
+  color:#d8c5b5;
+  text-align:center;
+  padding:20px;
+}
 
-    .button-link{
-      display:inline-block;
-      margin-top:18px;
-      padding:13px 24px;
-      background:#3b2f2f;
-      color:white;
-      border-radius:14px;
-      text-decoration:none;
-      transition:0.3s;
-    }
-
-    .button-link:hover{
-      background:#c08552;
-    }
-
-    .contact{
-      background:#3b2f2f;
-      color:white;
-      text-align:center;
-    }
-
-    .contact .section-title{
-      color:white;
-    }
-
-    .contact p{
-      margin-bottom:10px;
-    }
-
-    .contact a{
-      color:#f2d3ab;
-      text-decoration:none;
-    }
-
-    footer{
-      background:#2a1f1f;
-      color:#d6c3b2;
-      text-align:center;
-      padding:22px;
-      font-size:0.9rem;
-    }
-
-    @media(max-width:768px){
-
-      header h1{
-        font-size:2.8rem;
-      }
-
-      .section-title{
-        font-size:2.2rem;
-      }
-
-      nav a{
-        display:inline-block;
-        margin:8px;
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
 
 <body>
 
 <header>
-
   <div class="hero">
 
     <img src="profile.jpg" class="profile-img">
 
     <h1>Layla</h1>
 
-    <h2>Security-Focused Software Developer</h2>
+    <div class="typing">
+      Security-Focused Software Developer | UNISZA Student
+    </div>
 
-    <p>
-      Passionate Computer Science student with strong interest in software development, modern web technologies and secure system design. Dedicated to building professional, user-friendly and reliable digital solutions while continuously improving technical and cybersecurity knowledge.
+    <p style="margin-top:20px;">
+      Student at :contentReference[oaicite:0]{index=0}
     </p>
 
   </div>
-
 </header>
 
 <nav>
-
   <a href="#profile">Profile</a>
   <a href="#career">Career</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
-  <a href="#plan">Development Plan</a>
+  <a href="#plan">Plan</a>
   <a href="#evidence">Evidence</a>
   <a href="#reflection">Reflection</a>
-
+  <a href="#contact">Contact</a>
 </nav>
 
+<!-- PROFILE -->
 <section id="profile">
-
   <h2 class="section-title">Profile Summary</h2>
 
   <div class="card">
-
-    <p>
-      I am currently pursuing studies in Computer Science while actively developing my abilities in programming, web development and secure software practices. I enjoy designing systems that are both functional and visually appealing while ensuring security and usability are properly implemented. My ambition is to become a professional software developer capable of contributing to innovative and secure digital transformation projects.
-    </p>
-
+    I am a Computer Science student at
+    :contentReference[oaicite:1]{index=1}
+    with strong interest in secure software development and modern web systems.
   </div>
-
 </section>
 
+<!-- CAREER -->
 <section id="career">
-
   <h2 class="section-title">Career Exploration</h2>
 
   <div class="card">
 
-    <h3>Chosen Career Role: Software Developer (Security-Focused)</h3>
+    <h3>Software Developer (Security-Focused)</h3>
 
-    <p>
-      A security-focused software developer is responsible for creating software applications while ensuring systems are protected against security vulnerabilities and cyber threats. This role requires strong technical skills, problem-solving abilities and understanding of secure coding practices to protect user data and maintain reliable application performance.
-    </p>
+    <div class="career-grid">
 
-    <ul>
+      <div class="career-box">
+        <h4>Development</h4>
+        <p>Build scalable web applications using modern technologies.</p>
+      </div>
 
-      <li>Develop responsive and efficient software applications.</li>
+      <div class="career-box">
+        <h4>Security</h4>
+        <p>Implement authentication, encryption & secure coding.</p>
+      </div>
 
-      <li>Implement secure authentication and authorization features.</li>
+      <div class="career-box">
+        <h4>Testing</h4>
+        <p>Ensure system reliability and performance.</p>
+      </div>
 
-      <li>Perform debugging and system testing.</li>
+      <div class="career-box">
+        <h4>Collaboration</h4>
+        <p>Work in teams to improve software quality.</p>
+      </div>
 
-      <li>Apply secure coding practices and data protection methods.</li>
-
-      <li>Collaborate with development teams to improve system quality.</li>
-
-      <li>Maintain and update applications based on user requirements.</li>
-
-    </ul>
+    </div>
 
   </div>
-
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
-
   <h2 class="section-title">Education</h2>
-
-  <div class="grid">
-
-    <div class="card">
-
-      <h3>Bachelor of Computer Science (Internet Computing) with Honours</h3>
-
-      <h4>Universiti Sultan Zainal Abidin | 2023 - Present</h4>
-
-      <ul>
-
-        <li>Studying software engineering, web technologies and networking fundamentals.</li>
-
-        <li>Developing practical experience through academic system development projects.</li>
-
-        <li>Improving knowledge in cybersecurity and secure software practices.</li>
-
-      </ul>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Academic Interests</h3>
-
-      <h4>Focus Areas & Learning Development</h4>
-
-      <ul>
-
-        <li>Web Application Development</li>
-
-        <li>Database Systems</li>
-
-        <li>Human Computer Interaction</li>
-
-        <li>Software Testing & Debugging</li>
-
-        <li>Cybersecurity Fundamentals</li>
-
-        <li>System Analysis & Design</li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="skills">
-
-  <h2 class="section-title">Personal Skills Assessment</h2>
-
-  <div class="grid">
-
-    <div class="card">
-
-      <h3>Technical Skills</h3>
-
-      <span class="tag">HTML</span>
-      <span class="tag">CSS</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">PHP</span>
-      <span class="tag">Python</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">GitHub</span>
-      <span class="tag">CodeIgniter</span>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Cybersecurity & System Skills</h3>
-
-      <span class="tag">Secure Coding</span>
-      <span class="tag">Authentication</span>
-      <span class="tag">Input Validation</span>
-      <span class="tag">Linux Basics</span>
-      <span class="tag">Database Security</span>
-      <span class="tag">Troubleshooting</span>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Soft Skills</h3>
-
-      <span class="tag">Leadership</span>
-      <span class="tag">Communication</span>
-      <span class="tag">Problem Solving</span>
-      <span class="tag">Adaptability</span>
-      <span class="tag">Creativity</span>
-      <span class="tag">Teamwork</span>
-
-    </div>
-
-  </div>
 
   <div class="card">
 
-    <h3>Current Skills vs Industry Requirements</h3>
+    <h3>Bachelor of Computer Science (Internet Computing)</h3>
 
-    <p>
-      I currently possess foundational knowledge in software development, programming and secure system practices. However, to align with modern industry requirements, I plan to strengthen my expertise in cloud computing, API security, advanced backend development and software architecture through self-learning, certifications and practical projects.
-    </p>
+    <h4>
+      :contentReference[oaicite:2]{index=2}
+      | 2023 - Present
+    </h4>
+
+    <ul>
+      <li><b>CGPA: 3.79</b></li>
+      <li>Software engineering & web development</li>
+      <li>Cybersecurity fundamentals</li>
+      <li>Database systems & system design</li>
+    </ul>
 
   </div>
-
 </section>
 
-<section id="plan">
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
 
+  <div class="card">
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">PHP</span>
+    <span class="tag">Python</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">CodeIgniter</span>
+    <span class="tag">GitHub</span>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan">
   <h2 class="section-title">Career Development Plan</h2>
 
-  <div class="timeline">
+  <div class="card">
+    <h3>Short-Term</h3>
+    <ul>
+      <li>Internship in tech industry</li>
+      <li>Improve backend development</li>
+      <li>Build strong portfolio</li>
+    </ul>
 
-    <div class="timeline-item card">
-
-      <h3>Short-Term Goals (1 – 2 Years)</h3>
-
-      <ul>
-
-        <li>Complete internship in software development or IT industry.</li>
-
-        <li>Develop more portfolio projects and improve coding practices.</li>
-
-        <li>Learn Git collaboration workflow and advanced backend development.</li>
-
-        <li>Complete certifications such as Security+ or AWS Cloud Foundations.</li>
-
-        <li>Improve understanding of secure application development.</li>
-
-      </ul>
-
-    </div>
-
-    <div class="timeline-item card">
-
-      <h3>Long-Term Goals (3 – 5 Years)</h3>
-
-      <ul>
-
-        <li>Become a professional software developer with cybersecurity expertise.</li>
-
-        <li>Work in a technology-driven company focused on innovation.</li>
-
-        <li>Develop secure enterprise systems and scalable applications.</li>
-
-        <li>Continue professional development through industry certifications.</li>
-
-        <li>Expand knowledge in cloud computing and software architecture.</li>
-
-      </ul>
-
-    </div>
-
+    <h3>Long-Term</h3>
+    <ul>
+      <li>Become professional developer</li>
+      <li>Work at Google</li>
+      <li>Master system architecture</li>
+    </ul>
   </div>
-
 </section>
 
+<!-- EVIDENCE -->
 <section id="evidence">
-
   <h2 class="section-title">Evidence of Learning</h2>
 
   <div class="grid">
 
     <div class="card">
-
-      <img src="certificate1.jpg" class="certificate-img">
-
-      <h3>Python Essentials Certificate</h3>
-
-      <p>
-        Completed Python programming fundamentals covering problem solving, functions and programming concepts.
-      </p>
-
+      <img src="certificate1.jpg" style="width:100%; border-radius:15px;">
+      <h3>Python Certificate</h3>
     </div>
 
     <div class="card">
-
-      <img src="certificate2.jpg" class="certificate-img">
-
-      <h3>Web Development Certificate</h3>
-
-      <p>
-        Learned responsive web development and website structure through online technical learning.
-      </p>
-
+      <img src="certificate2.jpg" style="width:100%; border-radius:15px;">
+      <h3>Web Development</h3>
     </div>
 
     <div class="card">
-
-      <img src="certificate3.jpg" class="certificate-img">
-
-      <h3>Academic Projects & Workshops</h3>
-
-      <p>
-        Participated in university projects and workshops related to software development and digital technologies.
-      </p>
-
+      <img src="certificate3.jpg" style="width:100%; border-radius:15px;">
+      <h3>Workshops</h3>
     </div>
 
   </div>
-
 </section>
 
+<!-- REFLECTION -->
 <section id="reflection">
-
   <h2 class="section-title">Personal Reflection</h2>
 
   <div class="card">
-
-    <h3>Dream Company: PETRONAS</h3>
-
+    <h3>Dream Company: Google</h3>
     <p>
-      I aspire to work at PETRONAS because it is a highly respected organization that continuously embraces innovation, digital transformation and technological advancement. I believe working in such an environment would provide valuable opportunities for both personal and professional growth.
+      Google is one of my dream companies because it is known for innovation, creativity and advanced technology development. I am interested in working in an environment that encourages continuous learning and allows employees to improve their technical and professional skills.
     </p>
 
     <br>
 
     <p>
-      I can contribute by applying my technical skills, creativity and problem-solving abilities in developing efficient and secure digital systems. I am also eager to continuously improve my knowledge and adapt to evolving technologies in the software industry.
+      I believe I can contribute to the company through my passion for software development, problem-solving abilities and willingness to learn new technologies. I enjoy developing user-friendly systems while ensuring applications remain functional and secure.
     </p>
 
     <br>
 
     <p>
-      My strengths include responsibility, teamwork, adaptability and willingness to learn. Although I still need to improve my expertise in advanced software architecture and cybersecurity practices, I am committed to continuous learning and self-improvement to become a competent software developer in the future.
+      My skills in HTML, CSS, JavaScript, PHP, Python and database management make me suitable for this career path. I also possess soft skills such as teamwork, communication and adaptability which are important in collaborative working environments.
+    </p>
+
+    <br>
+
+    <p>
+      My strengths include responsibility, creativity and willingness to continuously improve myself. However, I still need to strengthen my expertise in advanced cybersecurity and software architecture. I believe with continuous learning and practical experience, I can become a competent software developer in the future.
     </p>
 
   </div>
-
 </section>
 
-<section class="contact">
-
-  <h2 class="section-title">Contact</h2>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2 class="section-title" style="color:white;">Contact</h2>
 
   <p>Email: layla@gmail.com</p>
-
   <p>GitHub: github.com/layla</p>
-
   <p>Location: Malaysia</p>
-
 </section>
 
 <footer>
-
-  <p>© 2026 Layla | Professional Software Developer Portfolio</p>
-
+  © 2026 Layla | Final Boss Portfolio
 </footer>
 
 </body>
 </html>
-```
