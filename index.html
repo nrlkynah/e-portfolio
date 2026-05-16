@@ -1,1 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layla | SOC Analyst Portfolio</title>
 
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Segoe UI',sans-serif;
+      background:#f8fafc;
+      color:#1e293b;
+      line-height:1.7;
+    }
+
+    header{
+      background:linear-gradient(135deg,#7c3aed,#9333ea,#c084fc);
+      color:white;
+      text-align:center;
+      padding:80px 10%;
+    }
+
+    .profile-img{
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid white;
+      margin-bottom:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    header h1{
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    header h2{
+      font-size:1.3rem;
+      font-weight:normal;
+      margin-bottom:20px;
+      color:#f3e8ff;
+    }
+
+    header p{
+      max-width:800px;
+      margin:auto;
+      color:#ede9fe;
+    }
+
+    nav{
+      background:white;
+      padding:18px;
+      position:sticky;
+      top:0;
+      z-index:100;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#6b21a8;
+      margin:0 12px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#c026d3;
+    }
+
+    section{
+      padding:70px 10%;
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin-bottom:30px;
+      color:#7c3aed;
+      border-left:6px solid #c084fc;
+      padding-left:15px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      margin-bottom:25px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      margin-bottom:12px;
+      color:#581c87;
+    }
+
+    .card h4{
+      margin-bottom:15px;
+      color:#7e22ce;
+      font-weight:normal;
+    }
+
+    ul{
+      margin-left:20px;
+      margin-top:10px;
+    }
+
+    li{
+      margin-bottom:10px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#ede9fe;
+      color:#6b21a8;
+      padding:8px 14px;
+      border-radius:30px;
+      margin:6px;
+      font-size:0.9rem;
+      font-weight:600;
+    }
+
+    .timeline{
+      border-left:4px solid #a855f7;
+      padding-left:25px;
+    }
+
+    .timeline-item{
+      margin-bottom:30px;
+    }
+
+    .button-link{
+      display:inline-block;
+      margin-top:15px;
+      padding:12px 18px;
+      background:#7c3aed;
+      color:white;
+      border-radius:12px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .button-link:hover{
+      background:#9333ea;
+    }
+
+    .project-img,
+    .certificate-img{
+      width:100%;
+      border-radius:15px;
+      margin-bottom:15px;
+    }
+
+    .contact{
+      background:#6b21a8;
+      color:white;
+      text-align:center;
+    }
+
+    .contact a{
+      color:#f5d0fe;
+      text-decoration:none;
+    }
+
+    footer{
+      background:#581c87;
+      color:#e9d5ff;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:2.2rem;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="profile.jpg" class="profile-img">
+  <h1>Layla</h1>
+  <h2>Future SOC Analyst</h2>
+
+  <p>
+    Computer Science student with strong interest in cybersecurity, network monitoring and digital security operations. Passionate about detecting cyber threats, analyzing suspicious activities and protecting systems from security attacks through continuous learning and technical skill development.
+  </p>
+</header>
+
+<nav>
+  <a href="#profile">Profile</a>
+  <a href="#career">Career</a>
+  <a href="#skills">Skills</a>
+  <a href="#plan">Plan</a>
+  <a href="#evidence">Evidence</a>
+  <a href="#reflection">Reflection</a>
+</nav>
+
+<section id="profile">
+
+  <h2 class="section-title">Profile Summary</h2>
+
+  <div class="card">
+    <p>
+      I am currently pursuing studies in Computer Science and developing my knowledge in cybersecurity, networking and system security. I am highly interested in becoming a SOC Analyst because I enjoy solving technical problems, monitoring systems and learning how organizations protect their digital infrastructure from cyber threats. I aim to continuously improve my technical and analytical skills to become a professional cybersecurity specialist in the future.
+    </p>
+  </div>
+
+</section>
+
+<section id="career">
+
+  <h2 class="section-title">Career Exploration</h2>
+
+  <div class="card">
+
+    <h3>Chosen Career Role: SOC Analyst</h3>
+
+    <p>
+      A Security Operations Center (SOC) Analyst is responsible for monitoring and analyzing security events within an organization’s systems and networks. SOC Analysts help identify cyber threats, investigate suspicious activities and respond to security incidents before they become serious attacks.
+    </p>
+
+    <ul>
+      <li>Monitor network traffic and security alerts.</li>
+      <li>Identify malware, phishing and suspicious activities.</li>
+      <li>Analyze logs and investigate security incidents.</li>
+      <li>Use cybersecurity tools such as Wireshark and SIEM platforms.</li>
+      <li>Support incident response and system protection activities.</li>
+      <li>Help organizations improve cybersecurity awareness and security practices.</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<section id="skills">
+
+  <h2 class="section-title">Personal Skills Assessment</h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>Technical Skills</h3>
+
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">PHP</span>
+      <span class="tag">Python</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Networking Basics</span>
+      <span class="tag">Linux Basics</span>
+      <span class="tag">Database Management</span>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Cybersecurity Skills</h3>
+
+      <span class="tag">Packet Analysis</span>
+      <span class="tag">Wireshark</span>
+      <span class="tag">Authentication</span>
+      <span class="tag">Secure Coding</span>
+      <span class="tag">Input Validation</span>
+      <span class="tag">Basic Threat Detection</span>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Soft Skills</h3>
+
+      <span class="tag">Communication</span>
+      <span class="tag">Problem Solving</span>
+      <span class="tag">Teamwork</span>
+      <span class="tag">Leadership</span>
+      <span class="tag">Adaptability</span>
+      <span class="tag">Time Management</span>
+
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <h3>Skills Gap Analysis</h3>
+
+    <p>
+      Although I already have foundational technical knowledge in programming and networking, I still need to improve my cybersecurity expertise to meet industry requirements for SOC Analysts. I plan to strengthen my knowledge in SIEM systems, penetration testing, cloud security, malware analysis and incident response handling.
+    </p>
+
+  </div>
+
+</section>
+
+<section id="plan">
+
+  <h2 class="section-title">Career Development Plan</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item card">
+
+      <h3>Short-Term Goals (1 – 2 Years)</h3>
+
+      <ul>
+        <li>Complete cybersecurity related courses and workshops.</li>
+        <li>Learn cybersecurity tools such as Wireshark, Kali Linux and Nmap.</li>
+        <li>Improve Linux and networking skills.</li>
+        <li>Prepare for certifications such as CompTIA Security+ and CCNA.</li>
+        <li>Gain internship experience in cybersecurity or IT support.</li>
+      </ul>
+
+    </div>
+
+    <div class="timeline-item card">
+
+      <h3>Long-Term Goals (3 – 5 Years)</h3>
+
+      <ul>
+        <li>Become a professional SOC Analyst.</li>
+        <li>Work in a cybersecurity company or security operations center.</li>
+        <li>Develop strong incident response and threat analysis skills.</li>
+        <li>Continue professional certifications and industry training.</li>
+        <li>Specialize in cloud security or digital forensics.</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="evidence">
+
+  <h2 class="section-title">Evidence of Learning</h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <img src="certificate1.jpg" class="certificate-img">
+
+      <h3>Python Essentials</h3>
+
+      <p>
+        Learned the fundamentals of Python programming including variables, functions, loops and problem solving techniques.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <img src="certificate2.jpg" class="certificate-img">
+
+      <h3>HTML & Web Development</h3>
+
+      <p>
+        Completed training in HTML and web development fundamentals including website structure and responsive design.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <img src="project1.jpg" class="certificate-img">
+
+      <h3>University Projects</h3>
+
+      <p>
+        Completed projects related to web development, database systems and system development during university studies.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="reflection">
+
+  <h2 class="section-title">Personal Reflection</h2>
+
+  <div class="card">
+
+    <h3>Dream Company: PETRONAS</h3>
+
+    <p>
+      I want to work at PETRONAS because it is one of the leading companies in Malaysia that actively focuses on technology and digital transformation. I believe working in such an organization would provide me with opportunities to grow professionally and improve my cybersecurity skills through real industry exposure.
+    </p>
+
+    <br>
+
+    <p>
+      The value I can bring to the company includes my willingness to learn, responsibility, teamwork and technical knowledge in programming and system development. I am also passionate about cybersecurity and always eager to improve my skills in protecting systems and user information.
+    </p>
+
+    <br>
+
+    <p>
+      My strengths include communication skills, adaptability and problem-solving abilities. However, I still need to improve my advanced cybersecurity knowledge and practical experience. I believe with continuous learning and hands-on practice, I can become a competent SOC Analyst in the future.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="contact">
+
+  <h2 class="section-title">Contact</h2>
+
+  <p>Email: layla@gmail.com</p>
+  <p>Location: Malaysia</p>
+
+</section>
+
+<footer>
+  <p>© 2026 Layla | SOC Analyst E-Portfolio</p>
+</footer>
+
+</body>
+</html>
