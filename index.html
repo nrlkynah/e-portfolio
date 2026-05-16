@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Layla |Software Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Layla | Software Developer Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
 
@@ -15,24 +18,25 @@
     }
 
     body{
-      font-family:'Poppins',sans-serif;
-      background:#0f172a;
-      color:#e2e8f0;
+      background:#f6f1eb;
+      color:#2b2b2b;
+      font-family:'Inter',sans-serif;
       line-height:1.8;
     }
 
     header{
       min-height:100vh;
-      background:
-      linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.92)),
-      url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
       display:flex;
       align-items:center;
       justify-content:center;
+      padding:80px 10%;
+      background:
+      linear-gradient(rgba(32,23,18,0.75),rgba(32,23,18,0.82)),
+      url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
       text-align:center;
-      padding:50px 10%;
+      color:white;
     }
 
     .hero{
@@ -42,84 +46,87 @@
     .profile-img{
       width:190px;
       height:190px;
-      border-radius:50%;
       object-fit:cover;
-      border:6px solid #38bdf8;
-      margin-bottom:25px;
-      box-shadow:0 10px 40px rgba(56,189,248,0.5);
+      border-radius:25px;
+      border:5px solid #d4a373;
+      margin-bottom:30px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.4);
     }
 
     header h1{
-      font-size:4rem;
+      font-family:'Playfair Display',serif;
+      font-size:4.5rem;
       margin-bottom:10px;
-      color:white;
+      letter-spacing:1px;
     }
 
     header h2{
-      font-size:1.5rem;
-      color:#38bdf8;
-      margin-bottom:20px;
-      font-weight:500;
+      font-size:1.3rem;
+      color:#f2d3ab;
+      margin-bottom:25px;
+      font-weight:400;
     }
 
     header p{
-      max-width:800px;
+      color:#f3f3f3;
+      max-width:760px;
       margin:auto;
-      color:#cbd5e1;
       font-size:1.05rem;
     }
 
     nav{
-      background:#020617;
-      padding:18px;
       position:sticky;
       top:0;
       z-index:1000;
+      background:#fffaf5;
+      padding:20px;
       text-align:center;
-      border-bottom:1px solid #1e293b;
+      box-shadow:0 4px 20px rgba(0,0,0,0.06);
     }
 
     nav a{
-      color:#e2e8f0;
       text-decoration:none;
-      margin:0 15px;
-      font-weight:500;
+      margin:0 18px;
+      color:#6b4f3b;
+      font-weight:600;
       transition:0.3s;
+      font-size:0.95rem;
+      letter-spacing:0.5px;
     }
 
     nav a:hover{
-      color:#38bdf8;
+      color:#c08552;
     }
 
     section{
-      padding:90px 10%;
+      padding:100px 10%;
     }
 
     .section-title{
-      font-size:2.5rem;
-      margin-bottom:40px;
-      color:white;
+      font-family:'Playfair Display',serif;
+      font-size:3rem;
+      margin-bottom:50px;
+      color:#3b2f2f;
       position:relative;
     }
 
     .section-title::after{
       content:'';
-      width:80px;
+      width:90px;
       height:4px;
-      background:#38bdf8;
+      background:#c08552;
       position:absolute;
       left:0;
-      bottom:-10px;
-      border-radius:10px;
+      bottom:-15px;
+      border-radius:20px;
     }
 
     .card{
-      background:#111c34;
-      padding:35px;
-      border-radius:25px;
-      margin-bottom:25px;
-      border:1px solid #1e293b;
-      box-shadow:0 15px 40px rgba(0,0,0,0.35);
+      background:white;
+      border-radius:30px;
+      padding:40px;
+      margin-bottom:30px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.07);
       transition:0.4s;
     }
 
@@ -128,15 +135,15 @@
     }
 
     .card h3{
-      color:white;
+      font-size:1.6rem;
+      color:#3b2f2f;
       margin-bottom:15px;
-      font-size:1.5rem;
     }
 
     .card h4{
-      color:#38bdf8;
-      margin-bottom:15px;
+      color:#b07d52;
       font-weight:500;
+      margin-bottom:18px;
     }
 
     ul{
@@ -150,23 +157,23 @@
 
     .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
     }
 
     .tag{
       display:inline-block;
-      background:#0f172a;
-      color:#38bdf8;
-      padding:10px 16px;
-      border-radius:40px;
+      background:#f6ebe0;
+      color:#8b5e34;
+      padding:10px 18px;
+      border-radius:50px;
       margin:6px;
-      border:1px solid #38bdf8;
       font-size:0.9rem;
+      font-weight:500;
     }
 
     .timeline{
-      border-left:4px solid #38bdf8;
+      border-left:3px solid #c08552;
       padding-left:25px;
     }
 
@@ -177,53 +184,60 @@
     .project-img,
     .certificate-img{
       width:100%;
-      border-radius:18px;
-      margin-bottom:18px;
-      border:1px solid #334155;
+      border-radius:20px;
+      margin-bottom:20px;
     }
 
     .button-link{
       display:inline-block;
-      margin-top:15px;
-      padding:12px 20px;
-      background:#38bdf8;
-      color:#0f172a;
-      border-radius:12px;
+      margin-top:18px;
+      padding:13px 24px;
+      background:#3b2f2f;
+      color:white;
+      border-radius:14px;
       text-decoration:none;
-      font-weight:600;
       transition:0.3s;
     }
 
     .button-link:hover{
-      background:#7dd3fc;
+      background:#c08552;
     }
 
     .contact{
-      background:#020617;
+      background:#3b2f2f;
+      color:white;
       text-align:center;
     }
 
+    .contact .section-title{
+      color:white;
+    }
+
+    .contact p{
+      margin-bottom:10px;
+    }
+
     .contact a{
-      color:#38bdf8;
+      color:#f2d3ab;
       text-decoration:none;
     }
 
     footer{
+      background:#2a1f1f;
+      color:#d6c3b2;
       text-align:center;
-      padding:20px;
-      background:#020617;
-      color:#94a3b8;
-      border-top:1px solid #1e293b;
+      padding:22px;
+      font-size:0.9rem;
     }
 
     @media(max-width:768px){
 
       header h1{
-        font-size:2.5rem;
+        font-size:2.8rem;
       }
 
-      header h2{
-        font-size:1.2rem;
+      .section-title{
+        font-size:2.2rem;
       }
 
       nav a{
@@ -250,7 +264,7 @@
     <h2>Security-Focused Software Developer</h2>
 
     <p>
-      Passionate Computer Science student with strong interest in software development, secure coding and modern web technologies. Experienced in developing responsive web systems and continuously improving technical skills in programming, databases and cybersecurity practices to build secure and reliable applications.
+      Passionate Computer Science student with strong interest in software development, modern web technologies and secure system design. Dedicated to building professional, user-friendly and reliable digital solutions while continuously improving technical and cybersecurity knowledge.
     </p>
 
   </div>
@@ -263,7 +277,7 @@
   <a href="#career">Career</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
-  <a href="#plan">Plan</a>
+  <a href="#plan">Development Plan</a>
   <a href="#evidence">Evidence</a>
   <a href="#reflection">Reflection</a>
 
@@ -276,7 +290,7 @@
   <div class="card">
 
     <p>
-      I am currently pursuing studies in Computer Science and actively developing my skills in web development, software engineering and secure application development. I enjoy creating user-friendly systems while ensuring security, functionality and performance are properly implemented. My goal is to become a professional software developer with strong awareness in cybersecurity and secure coding practices.
+      I am currently pursuing studies in Computer Science while actively developing my abilities in programming, web development and secure software practices. I enjoy designing systems that are both functional and visually appealing while ensuring security and usability are properly implemented. My ambition is to become a professional software developer capable of contributing to innovative and secure digital transformation projects.
     </p>
 
   </div>
@@ -292,22 +306,22 @@
     <h3>Chosen Career Role: Software Developer (Security-Focused)</h3>
 
     <p>
-      A security-focused software developer is responsible for designing, developing and maintaining software applications while applying secure coding principles to protect systems and user data. This role is highly important in modern industries because many organizations depend on digital platforms and cloud-based applications that are exposed to cyber threats and security vulnerabilities.
+      A security-focused software developer is responsible for creating software applications while ensuring systems are protected against security vulnerabilities and cyber threats. This role requires strong technical skills, problem-solving abilities and understanding of secure coding practices to protect user data and maintain reliable application performance.
     </p>
 
     <ul>
 
-      <li>Develop responsive and secure web applications.</li>
+      <li>Develop responsive and efficient software applications.</li>
 
-      <li>Implement authentication and authorization systems.</li>
+      <li>Implement secure authentication and authorization features.</li>
 
-      <li>Apply secure coding practices to reduce vulnerabilities.</li>
+      <li>Perform debugging and system testing.</li>
 
-      <li>Manage databases securely and protect sensitive information.</li>
+      <li>Apply secure coding practices and data protection methods.</li>
 
-      <li>Debug systems and improve software performance.</li>
+      <li>Collaborate with development teams to improve system quality.</li>
 
-      <li>Collaborate with teams to develop efficient digital solutions.</li>
+      <li>Maintain and update applications based on user requirements.</li>
 
     </ul>
 
@@ -329,11 +343,11 @@
 
       <ul>
 
-        <li>Studying web development, networking, database systems and internet technologies.</li>
+        <li>Studying software engineering, web technologies and networking fundamentals.</li>
 
-        <li>Developing skills in secure software development and system design.</li>
+        <li>Developing practical experience through academic system development projects.</li>
 
-        <li>Involved in academic projects related to programming and web applications.</li>
+        <li>Improving knowledge in cybersecurity and secure software practices.</li>
 
       </ul>
 
@@ -341,23 +355,23 @@
 
     <div class="card">
 
-      <h3>Relevant Coursework & Learning Areas</h3>
+      <h3>Academic Interests</h3>
 
-      <h4>Technical Knowledge Development</h4>
+      <h4>Focus Areas & Learning Development</h4>
 
       <ul>
 
         <li>Web Application Development</li>
 
-        <li>Database Management Systems</li>
+        <li>Database Systems</li>
 
-        <li>Network & System Administration</li>
+        <li>Human Computer Interaction</li>
+
+        <li>Software Testing & Debugging</li>
 
         <li>Cybersecurity Fundamentals</li>
 
-        <li>Software Engineering</li>
-
-        <li>Human Computer Interaction</li>
+        <li>System Analysis & Design</li>
 
       </ul>
 
@@ -383,8 +397,8 @@
       <span class="tag">PHP</span>
       <span class="tag">Python</span>
       <span class="tag">MySQL</span>
-      <span class="tag">CodeIgniter</span>
       <span class="tag">GitHub</span>
+      <span class="tag">CodeIgniter</span>
 
     </div>
 
@@ -395,9 +409,9 @@
       <span class="tag">Secure Coding</span>
       <span class="tag">Authentication</span>
       <span class="tag">Input Validation</span>
-      <span class="tag">Linux Fundamentals</span>
-      <span class="tag">Networking Basics</span>
+      <span class="tag">Linux Basics</span>
       <span class="tag">Database Security</span>
+      <span class="tag">Troubleshooting</span>
 
     </div>
 
@@ -405,12 +419,12 @@
 
       <h3>Soft Skills</h3>
 
-      <span class="tag">Communication</span>
       <span class="tag">Leadership</span>
+      <span class="tag">Communication</span>
       <span class="tag">Problem Solving</span>
-      <span class="tag">Teamwork</span>
-      <span class="tag">Creativity</span>
       <span class="tag">Adaptability</span>
+      <span class="tag">Creativity</span>
+      <span class="tag">Teamwork</span>
 
     </div>
 
@@ -418,10 +432,10 @@
 
   <div class="card">
 
-    <h3>Skills Gap Analysis</h3>
+    <h3>Current Skills vs Industry Requirements</h3>
 
     <p>
-      Although I already have a strong foundation in web development and programming, I still need to improve my knowledge in advanced cybersecurity, cloud technologies, API security and enterprise software architecture to meet current industry standards. I plan to continuously improve through self-learning, online certifications and practical projects.
+      I currently possess foundational knowledge in software development, programming and secure system practices. However, to align with modern industry requirements, I plan to strengthen my expertise in cloud computing, API security, advanced backend development and software architecture through self-learning, certifications and practical projects.
     </p>
 
   </div>
@@ -440,15 +454,15 @@
 
       <ul>
 
-        <li>Complete internship related to software development or cybersecurity.</li>
+        <li>Complete internship in software development or IT industry.</li>
 
-        <li>Improve secure coding and debugging skills.</li>
+        <li>Develop more portfolio projects and improve coding practices.</li>
 
-        <li>Learn advanced GitHub and collaborative development workflow.</li>
+        <li>Learn Git collaboration workflow and advanced backend development.</li>
 
-        <li>Complete certifications such as Security+, CCNA or AWS Cloud Foundations.</li>
+        <li>Complete certifications such as Security+ or AWS Cloud Foundations.</li>
 
-        <li>Build more full-stack web applications and personal projects.</li>
+        <li>Improve understanding of secure application development.</li>
 
       </ul>
 
@@ -462,13 +476,13 @@
 
         <li>Become a professional software developer with cybersecurity expertise.</li>
 
-        <li>Work in a technology-driven company focusing on digital innovation.</li>
+        <li>Work in a technology-driven company focused on innovation.</li>
 
-        <li>Develop enterprise-level secure systems and applications.</li>
+        <li>Develop secure enterprise systems and scalable applications.</li>
 
-        <li>Expand expertise in cloud computing and software security.</li>
+        <li>Continue professional development through industry certifications.</li>
 
-        <li>Continue professional development through industry certifications and experience.</li>
+        <li>Expand knowledge in cloud computing and software architecture.</li>
 
       </ul>
 
@@ -491,7 +505,7 @@
       <h3>Python Essentials Certificate</h3>
 
       <p>
-        Completed foundational Python programming course covering variables, loops, functions and problem-solving concepts.
+        Completed Python programming fundamentals covering problem solving, functions and programming concepts.
       </p>
 
     </div>
@@ -500,10 +514,10 @@
 
       <img src="certificate2.jpg" class="certificate-img">
 
-      <h3>HTML & Web Development Certificate</h3>
+      <h3>Web Development Certificate</h3>
 
       <p>
-        Learned web development fundamentals including responsive design, forms and website structure.
+        Learned responsive web development and website structure through online technical learning.
       </p>
 
     </div>
@@ -512,10 +526,10 @@
 
       <img src="certificate3.jpg" class="certificate-img">
 
-      <h3>Project & Workshop Participation</h3>
+      <h3>Academic Projects & Workshops</h3>
 
       <p>
-        Participated in academic projects and workshops related to software development and cybersecurity awareness.
+        Participated in university projects and workshops related to software development and digital technologies.
       </p>
 
     </div>
@@ -533,19 +547,19 @@
     <h3>Dream Company: PETRONAS</h3>
 
     <p>
-      I want to work at PETRONAS because it is one of the leading companies in Malaysia that continuously invests in digital transformation and technological innovation. I believe working in such an environment would help me grow professionally while allowing me to contribute my technical knowledge and creativity.
+      I aspire to work at PETRONAS because it is a highly respected organization that continuously embraces innovation, digital transformation and technological advancement. I believe working in such an environment would provide valuable opportunities for both personal and professional growth.
     </p>
 
     <br>
 
     <p>
-      I can contribute to the company by developing secure and efficient software systems, solving technical problems and adapting quickly to new technologies. I am passionate about software development and continuously improving my knowledge in secure coding and modern web technologies.
+      I can contribute by applying my technical skills, creativity and problem-solving abilities in developing efficient and secure digital systems. I am also eager to continuously improve my knowledge and adapt to evolving technologies in the software industry.
     </p>
 
     <br>
 
     <p>
-      My strengths include responsibility, teamwork, communication skills and willingness to learn. However, I still need to improve my advanced software architecture and cybersecurity expertise. I believe with continuous practice and industry exposure, I can become a valuable software developer in the future.
+      My strengths include responsibility, teamwork, adaptability and willingness to learn. Although I still need to improve my expertise in advanced software architecture and cybersecurity practices, I am committed to continuous learning and self-improvement to become a competent software developer in the future.
     </p>
 
   </div>
@@ -566,7 +580,7 @@
 
 <footer>
 
-  <p>© 2026 Layla | Security-Focused Software Developer Portfolio</p>
+  <p>© 2026 Layla | Professional Software Developer Portfolio</p>
 
 </footer>
 
